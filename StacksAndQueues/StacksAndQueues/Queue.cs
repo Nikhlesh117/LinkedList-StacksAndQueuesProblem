@@ -35,10 +35,11 @@ namespace StacksAndQueues
             {
                 Console.WriteLine("Queue is empty");
             }
-            Node temp = this.head;
-            this.head = this.head.next;
-
-            Console.WriteLine("\nItem Dequeue is {0}", temp.data);
+            else
+            {
+                this.head = this.head.next;
+                Console.WriteLine("First element removed");
+            }
         }
         public void Display()
         {
