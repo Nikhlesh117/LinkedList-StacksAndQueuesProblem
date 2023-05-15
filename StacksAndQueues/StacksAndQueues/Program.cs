@@ -11,15 +11,15 @@ namespace StacksAndQueues
     {
         public static void Main(string[] args)
         {
-            Stack stack = new Stack();
-            stack.Push(70);
-            stack.Push(30);
-            stack.Push(56);
+            //Stack stack = new Stack();
+            //stack.Push(70);
+            //stack.Push(30);
+            //stack.Push(56);
 
-            stack.Peak();
-            stack.Pop();
+            //stack.Peak();
+            //stack.Pop();
             
-            stack.Display();
+            //stack.Display();
             //Queue queue = new Queue();
           
             //queue.Enqueue(56);
