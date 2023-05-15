@@ -15,10 +15,15 @@ namespace StacksAndQueues
             //stack.Push(30);
             //stack.Push(56);
 
+UC1_StackPushAndPop
+            stack.Peak();
+            stack.Pop();
+            
+            stack.Display();
+
             //stack.Peak();
             //stack.Pop();
 
-            //stack.IsEmpty();
             //stack.Display();
 
             Queue queue = new Queue();
@@ -30,6 +35,7 @@ namespace StacksAndQueues
             queue.Dequeue();
             queue.Dequeue();
             queue.Display();
+
             Console.ReadLine();
         }
     }
