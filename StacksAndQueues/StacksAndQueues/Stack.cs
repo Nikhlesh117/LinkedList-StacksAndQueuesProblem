@@ -9,59 +9,51 @@ namespace StacksAndQueues
     public class Stack
     {
         public Node top;
-        public void Push(int data)
+        public StackPract()
         {
-            Node node = new Node(data);
-
-            if (this.top == null)
+            top = null;
+        }
+        public void Push(int value)
+        {
+            Node node = new Node(value);
+            if (top == null) 
             {
-                this.top = node;
+                node.next = null;
             }
             else
             {
-                node.next = this.top;
-                this.top = node;
+                node.next = top;
             }
-            Console.WriteLine("{0} Pushed into stack", node.data);
+            top = node;
+            //Console.WriteLine(value);
         }
-        public void Peak()
+        public void Peek() 
         {
-            if (this.top == null)
+            if(top == null)
             {
                 Console.WriteLine("Stack is empty");
-                return;
             }
-            Console.WriteLine("{0} is in the Peak of the stack  ", this.top.data);
+            Console.WriteLine("Peek :" + this.top.data);
         }
         public void Pop()
         {
-            if (this.top == null)
+            if (top == null)
             {
-                Console.WriteLine("Stack is empty, Deletion is not possible");
-                return;
+                Console.WriteLine("Stack is empty");
             }
-            Console.WriteLine("Value popped is {0} ", this.top.data);
+            Console.WriteLine("Pop :" + this.top.data);
             this.top = this.top.next;
-        }
-        public void IsEmpty()
-        {
-            while (this.top != null)
-            {
-                Peak();
-                Pop();
-            }
         }
         public void Display()
         {
-            Node temp = this.top;
+            Node temp = top;
             if (temp == null)
             {
-                Console.WriteLine("stack is empty");
-                return;
+                Console.WriteLine("Queue is Empty");
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.WriteLine(temp.data);
                 temp = temp.next;
             }
         }
