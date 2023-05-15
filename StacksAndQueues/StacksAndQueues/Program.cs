@@ -17,8 +17,7 @@ namespace StacksAndQueues
 
             stack.Peak();
             stack.Pop();
-
-            stack.IsEmpty();
+            
             stack.Display();
             Console.ReadLine();
         }
