@@ -9,7 +9,7 @@ namespace StacksAndQueues
     public class Stack
     {
         public Node top;
-        public StackPract()
+        public Stack()
         {
             top = null;
         }
