@@ -157,23 +157,24 @@ namespace StacksAndQueues
                 temp = temp.next;
             }
         }
-        public void Sort(int data)
+        public void Sort(int value)
         {
-            Node newNode = new Node(data);
-            Node temp = head;
-            if (head == null || head.data >= newNode.data)
+            Node newNode = new Node(value);
+
+            if (head == null || value < head.data)
             {
                 newNode.next = head;
                 head = newNode;
             }
             else
             {
-                while (temp.next != null && temp.next.data < newNode.data)
+                Node current = head;
+                while (current.next != null && current.next.data < value)
                 {
-                    temp = temp.next;
+                    current = current.next;
                 }
-                newNode.next = temp.next;
-                temp.next = newNode;
+                newNode.next = current.next;
+                current.next = newNode;
             }
         }
         public void Size()
